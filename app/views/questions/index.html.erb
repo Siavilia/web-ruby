@@ -1,0 +1,31 @@
+<% provide :page_title, t('.title') %>
+<% currently_at t('menu.questions') %>
+<%= stylesheet_link_tag "questions" %>
+<div class="row">
+    <div class='col-1'></div>
+    <!--Questions-->
+    <div class="col-10">  
+        <%#== pagy_bootstrap_nav_js(@pagy) %>
+            <div class='row'>
+                <div id='questions' class='col-7'>
+                    <%= render @questions %>
+                </div>
+                <div id='side_widget' class='col-5'>
+                    <% if policy(:question).new?%>
+                        <section id='question_form'>
+                            <h5 class='create_new_qst'><%=t('.new_qst')%></h5>
+                            <%= render 'form' %>
+                        <section>
+                    <% end %>
+                </div>
+            </div> 
+    </div>
+    <!--Side widgets-->
+    <div class="col-1"></div>
+</div>
+
+<div id="modalEditWindow" class="modal fade" tabindex="-1" aria-labelledby="editLabel" aria-hidden="true">
+  <div class="modal-dialog" >
+    <div class="modal-content"></div>
+  </div>
+</div>

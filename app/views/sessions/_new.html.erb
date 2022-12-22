@@ -1,0 +1,10 @@
+<div class="modal-header">
+    <h3 class="modal-title text-black" id="loginLabel"><%= t('shared.menu.log_in') %></h3>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+    <%= render 'form'%>
+    <div class='d-grid gap-2 mt-2'>
+      <%= link_to  t('shared.menu.sign_up'), new_user_path, class: 'btn btn-link', remote: true %>
+    </div>
+</div>

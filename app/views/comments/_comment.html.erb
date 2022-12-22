@@ -1,0 +1,23 @@
+<article class="mb-3 card" id="comment-<%= comment.id %>">
+  <div class="card-header">
+    <%= comment.user.name %>
+    <time datetime="<%= comment.formatted_created_at %>">
+      <%= comment.formatted_created_at %>
+    </time>
+
+    <div class="btn-group btn-group-sm" role="group">
+      <% if policy(comment).edit?%>
+        <%= link_to ('<i class="bi bi-pen"></i>'.html_safe), edit_question_comment_path(question, comment),class: 'btn', data: {'bs-toggle': "modal", 'bs-target': '#modalEditWindow'}, remote: true %>
+      <% end %>
+      <% if policy(comment).destroy?%>
+        <%= link_to ('<i class="bi bi-trash2-fill"></i>'.html_safe), question_comment_path(question, comment), class: 'btn', data: {method: :delete, confirm: t('btn.confirm')}, remote: true %>
+      <% end %>      
+    </div>
+  </div>
+
+  <div class="card-body">
+    <p class="mt-2 mb-2">
+      <%= comment.body %>
+    </p>
+  </div>
+</article>

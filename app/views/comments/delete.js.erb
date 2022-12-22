@@ -1,0 +1,7 @@
+var elem = $("#comments").find("article#comment-<%= @comment.id %>");
+
+elem.fadeOut(500, function(){ elem.remove(); });
+
+if (elem.children('article').length == 0) {
+    $('.add-smt').html("<p class='mt-2 mb-2 add-smt'><%= j(t('questions.show.not_comments')) %></p>");
+};

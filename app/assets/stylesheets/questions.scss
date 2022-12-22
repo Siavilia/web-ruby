@@ -1,0 +1,39 @@
+.create_new_qst {
+    text-align: center;
+}
+
+// #flash {
+//     position: absolute;
+//     z-index: 1;
+// }
+
+.bi-trash2-fill::before {
+    content: "\f5df";
+    color: #cc2334;
+}
+
+.bi-pen::before {
+    content: "\f4c8";
+    color: #5a9fdf;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a.stretched-link {
+    color: #000000;
+    text-decoration: none;
+}
+
+#question_form {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

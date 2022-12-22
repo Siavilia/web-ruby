@@ -1,0 +1,11 @@
+<%= form_with url: session_path, local: false do |f| %>
+    <div class="mb-2">
+      <%= f.email_field :email, placeholder: t('.e_mail'), class: 'form-control form-control-lg' %>
+    </div>
+
+    <div class="mb-2">
+      <%= f.password_field :password, class: 'form-control form-control-lg', placeholder: t('.password') %>
+    </div>
+
+    <div class='d-grid gap-2'><%= f.submit t('.sign_in'), class: 'btn btn-outline-dark' %></div>
+<% end %>

@@ -1,0 +1,3 @@
+var elem = $("#questions").find("article#<%= @id %>");
+
+elem.fadeOut(500, function(){ elem.remove(); });

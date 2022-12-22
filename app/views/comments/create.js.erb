@@ -1,0 +1,12 @@
+var form = $('#comment');
+
+if (form.children('.alert-danger').length > 0) {
+    $('.alert-danger').remove();
+}
+<% if @comment.errors.any? %>
+  form.prepend("<%= j(render 'shared/errors', object: @comment) %>")
+<% else %>
+  $('.add-smt').html("<h5 class='mt-2 mb-2'><%= j(t('questions.show.comments')) %></h5>")
+
+  $('#comments').prepend("<%= j(render partial: 'comment', locals: {question: @question, comment: @comment}) %>");
+<% end %>

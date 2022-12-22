@@ -1,0 +1,12 @@
+var modal = $('.modal-body');
+
+if (modal.children('.alert-danger').length > 0) {
+    $('.alert-danger').remove();
+}
+<% if @comment.errors.any? %>
+  modal.append("<%= j(render 'shared/errors', object: @comment) %>")
+<% else %>
+  var elem = $("#comments").find("article#comment-<%= @comment.id %>");
+  elem.replaceWith("<%= j(render partial: 'comment', locals: {question: @question, comment: @comment}) %>");
+  $('#modalEditWindow').find(".btn-close").click();
+<% end %>

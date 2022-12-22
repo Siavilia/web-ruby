@@ -1,0 +1,28 @@
+<article id="<%= question.id%>", class="card mb-3">
+
+    <div class="card-header">
+      <%= question.user.name %>
+      <time datetime="<%= question.formatted_created_at %>">
+        <small><%= question.formatted_created_at %></small>
+      </time>
+      <div id="btn_question" class="btn-group btn-group-sm" role="group">
+        <% if policy(question).edit?%>
+          <%= link_to ('<i class="bi bi-pen"></i>'.html_safe), edit_question_path(question), class: 'btn', data: {'bs-toggle': "modal", 'bs-target': '#modalEditWindow'}, remote: true %> 
+        <% end%>
+        <% if policy(question).destroy?%>
+          <%= link_to ('<i class="bi bi-trash2-fill"></i>'.html_safe), question_path(question), class: 'btn', remote: true, data: {method: :delete, confirm: t('btn.confirm')} %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="card-body">
+      <section class="position-relative">
+        <p><%= link_to question.title, question_path(question), class: "stretched-link fs-3" %></p>
+        
+        <p class="card-text">
+          <%= truncate strip_tags(question.body), length: 20, omission: '... (continued)' %>
+        </p>
+      </section>
+    </div>
+
+</article>

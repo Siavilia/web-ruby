@@ -1,0 +1,10 @@
+<% provide :page_title, t('.title') %>
+<% currently_at t('menu.edit_profile') %>
+
+<article class="container justify-content-center mw-30">
+       <h3 class="mb-4"><%= t('.title') %></h3>
+       <%= render 'form' %>
+
+       <div class='d-grid gap-2'><%= link_to t('btn.delete'), user_path(@user), class: 'btn btn-outline-danger mt-2', data: {method: :delete, confirm: t('btn.confirm')} %></div>
+</article>
+

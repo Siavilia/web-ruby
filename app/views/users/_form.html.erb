@@ -1,0 +1,19 @@
+<%= form_with model: @user, local: false do |f| %>
+  <div class="mb-2">
+     <%= f.email_field :email, placeholder: t('.e_mail'), class: 'form-control form-control-lg' %>
+  </div>
+
+  <div class="mb-2">
+    <%= f.text_field :name, placeholder: t('.name'), class: 'form-control form-control-lg' %>
+  </div>
+
+  <div class="mb-2">
+    <%= f.password_field :password, class: 'form-control form-control-lg', placeholder: t('.password') %>
+  </div>
+
+  <div class="mb-2">
+    <%= f.password_field :password_confirmation, class: 'form-control form-control-lg', placeholder: t('.password') %>
+  </div>
+  <div class='d-grid gap-2'><%= f.submit (@user.new_record? ? t('.register') : t('.save')),
+    class: 'btn btn-outline-dark' %></div>
+<% end %>

@@ -1,0 +1,9 @@
+<% if user_signed_in? %>
+    location.reload();
+<%else%>
+    var modal = $('.modal-body');
+    if (modal.children('.alert-warning').length > 0) {
+        $('.alert-warning').remove();
+    }
+    modal.prepend("<%= j(render partial: 'shared/flash', flash: flash) %>");
+<%end%>

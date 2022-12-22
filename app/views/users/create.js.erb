@@ -1,0 +1,10 @@
+var form = $('.card-body');
+
+if (form.children('.alert-danger').length > 0) {
+    $('.alert-danger').remove();
+}
+<% if @user.errors.any? %>
+    form.append("<%= j(render 'shared/errors', object: @user) %>")
+<% else %>
+    location.reload();
+<% end %>

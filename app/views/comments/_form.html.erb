@@ -1,0 +1,6 @@
+<%= form_with model: [@question, @comment], id: "comment", local: false do |f| %>
+  <div class="mb-2">
+    <%= f.text_area :body, class: 'form-control', placeholder: t('.text') %>
+  </div>
+  <div class='d-grid gap-2 mb-2'><%= f.submit t('btn.submit'), class: 'btn btn-outline-dark btn-block' %></div>
+<% end %>

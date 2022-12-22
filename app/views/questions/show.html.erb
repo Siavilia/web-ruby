@@ -1,0 +1,49 @@
+<% provide :page_title, @question.title %>
+<% currently_at t('menu.questions') %>
+<%= stylesheet_link_tag "questions" %>
+<%= stylesheet_link_tag "comment" %>
+<div>
+  <article id="<%= @question.id%>", class="card mb-3">
+    <div class="card-header">
+      <%= @question.user.name %>
+      <time datetime="<%= @question.formatted_created_at %>">
+        <small><%= @question.formatted_created_at %></small>
+      </time> 
+    </div>
+
+    <div class="card-body">
+      <section>
+        <p><%= @question.title %></p>        
+        <p class="card-text">
+          <%= truncate strip_tags(@question.body), length: 20, omission: '... (continued)' %>
+        </p>
+      </section>
+    </div>
+  </article>
+
+    <hr class="my-4">
+    <span class='add-smt'>
+      <% if @comments.empty? %>
+        <p class="mt-2 mb-2"><%= t('.not_comments') %></p>
+      <%else%>
+        <h5 class="mt-2 mb-2"><%= t('.comments') %></h5>
+      <%end%>
+    </span>
+    <%#= paginate @comments %>
+    <div id="comments">
+      <%= render partial: 'comments/comment', collection: @comments, as: :comment, locals: {question: @question} %>
+    </div>
+
+    <%#= paginate @comments %>
+    <% if policy(@question).new?%>
+      <div class='col-sm-5'>
+        <%= render 'comments/form' %>
+      </div>
+    <% end %>
+</div>
+
+<div id="modalEditWindow" class="modal fade" tabindex="-1" aria-labelledby="editLabel" aria-hidden="true">
+  <div class="modal-dialog" >
+    <div class="modal-content"></div>
+  </div>
+</div>

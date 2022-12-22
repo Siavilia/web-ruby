@@ -1,0 +1,16 @@
+var modal = $('.modal-body');
+
+if (modal.children('.alert-danger').length > 0) {
+    $('.alert-danger').remove();
+}
+<% if @question.errors.any? %>
+  modal.append("<%= j(render 'shared/errors', object: @question) %>")
+<% else %>
+  var elem = $("#questions").find("article#<%= @question.id %>");
+  elem.replaceWith("<%= j(render @question) %>");
+  $('#modalEditWindow').find(".btn-close").click();
+  elem.blur();
+  $('header').after("<%= j(render partial: 'shared/flash', flash: flash) %>");
+  var flash = $('#flash');
+  flash.fadeOut(2000, function(){ flash.remove(); });
+<% end %>

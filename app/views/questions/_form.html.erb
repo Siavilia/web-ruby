@@ -1,0 +1,10 @@
+<%= form_with(model: @question, id: 'question', local: false) do |f| %>
+  <div class="x-2 mb-2">
+    <%= f.text_field :title, placeholder: t('.title'), class: 'form-control' %>
+  </div>
+
+  <div class="x-2 mb-2">
+    <%= f.text_area :body, class: 'form-control', placeholder: t('.body') %>
+  </div>
+  <div class='d-grid gap-2'><%= f.submit t('.submit'), class: 'btn btn-outline-dark' %></div>
+<% end %>

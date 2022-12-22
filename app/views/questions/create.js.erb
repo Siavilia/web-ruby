@@ -1,0 +1,10 @@
+var form = $('#question_form');
+
+if (form.children('.alert-danger').length > 0) {
+    $('.alert-danger').remove();
+}
+<% if @question.errors.any? %>
+  form.append("<%= j(render 'shared/errors', object: @question) %>")
+<% else %>
+  $('#questions').prepend("<%= j(render @question) %>");
+<% end %>

@@ -1,0 +1,94 @@
+ru:
+  en: Английский
+  ru: Русский
+  btn:
+    show: 'Показать'
+    edit: 'Изменить'
+    delete: 'Удалить'
+    submit: 'Отправить'
+    confirm: "Вы уверены?"
+  users:
+    form:
+      title: 'Войти'
+      e_mail: 'Введите e-mail'
+      name: 'Введите имя'
+      password: 'Введите пароль'
+      register: 'Зарегистрироваться'
+      save: 'Сохранить'
+    edit:
+      title: 'Изменить профиль'
+    new:
+      title: 'Регистрация'
+    create: 'Добро подаловать,' 
+
+  sessions:
+    form:
+      e_mail: 'Введите e-mail'
+      password: 'Введите пароль'
+      sign_in: 'Войти'
+    nav:
+      edit_profile: Профиль
+      log_out: Выйти
+      log_in: Войти
+
+  pages:
+    index:
+      title: "Добро пожаловить на форум о 'Hollow knight'!"
+      text: "Рады приветствовать вас на вики-проекте, посвящённом игре Hollow Knight! Эта вики — объединение сообщества фанатов, где каждый может принять участие в проекте и внести свой вклад в развитие. Не бойтесь проявить себя и тем более попросить помощи в начинании — здесь вам всегда рады!"
+
+  questions:
+    index:
+      title: 'Обсуждение'
+      new_qst: 'Создать новый вопрос'
+    form:
+      title: 'Введите заголовок'
+      body: 'Введите текст'
+      submit: 'Опубликовать'
+    edit:
+      title: 'Изменить вопрос'
+    show:
+      comments: 'Комментарии'
+      not_comments: 'Здесь еще нет ни одного комментария. Ты можешь быть первым!'
+    create: 'Вопрос создан!'
+    update: 'Вопрос обновлен!'
+
+  comments:
+    create: "Комментарий создан!"
+
+  shared:
+    menu:
+      edit_profile: Профиль
+      home: Главная
+      log_in: Войти
+      log_out: Выйти
+      questions: Обсуждение
+      sign_up: Зарегистрироваться 
+
+  activerecord:
+    attributes:
+      comment:
+        body: Текст
+        question: Вопрос
+      question:
+        body: Текст
+        title: Заголовок
+      user:
+        email: Email
+        name: Имя
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+    models:
+      question: Вопросы
+
+  comments:
+    form:
+      text: 'Введите комментарий'
+    edit:
+      title: 'Изменение комментария'
+    create:
+      success: Комментарий создан!
+    destroy:
+      success: Комментарий удален!
+    update:
+      success: Комментарий обновлен!  
+  hello: "Hello world"

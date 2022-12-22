@@ -1,0 +1,104 @@
+en:
+  en: English
+  ru: Russian
+  btn:
+    show: 'Show'
+    edit: 'Edit'
+    delete: 'Delete'
+    submit: 'Submit'
+    confirm: "Are you sure?"
+  users:
+    form:
+      title: 'Log in'
+      e_mail: 'Input e-mail'
+      name: 'Input name'
+      password: 'Input a password'
+      register: 'Register'
+      save: 'Save'
+    edit:
+      title: 'Edit profile'
+    new:
+      title: 'Registration'
+    create: 'Welcome,' 
+
+  sessions:
+    form:      
+      e_mail: 'Input e-mail'
+      password: 'Input a password'      
+      sign_in: 'Sign in'
+    nav:
+      edit_profile: Profile
+      log_out: Log out
+      log_in: Log In
+
+
+  pages:
+    index:
+      title: "Welcome on the forum about 'Hollow knight'!"
+      text: "We are glad to welcome you to the wiki project dedicated to the Hollow Knight game! This wiki is an association of a community of fans, where everyone can participate in the project and contribute to the development. Do not be afraid to prove yourself and even more so to ask for help in your endeavor — you are always welcome here!"
+
+  questions:
+    index:
+      title: 'Discussion'
+      new_qst: 'Create new question'
+    form:
+      title: 'Input a title'
+      body: 'Input a text'
+      submit: 'Submit'
+    edit:
+      title: 'Edit question'
+    show:
+      comments: 'Comments'
+      not_comments: 'There are no comments here yet. You can be the first!'
+    create: 'Question created!'
+    update: 'Question update!'
+
+  comments:
+    create: "Comment created!"
+    
+  global:
+    flash:
+        already_signed_in: You are already signed in!
+        not_signed_in: You are not signed in!
+        not_authorized: You are not authorized to perform this action!
+      
+  menu:
+    edit_profile: Profile
+    home: Home
+    log_in: Log In
+    log_out: Log out
+    questions: Discuss
+    sign_up: Sign Up
+    users: Users  
+
+  activerecord:
+    attributes:
+      comment:
+        body: Body
+        question: Question
+      question:
+        body: Body
+        title: Title
+      user:
+        created_at: Created at
+        email: Email
+        name: Name
+        old_password: Old password
+        password: Password
+        password_confirmation: Password confirmation
+        updated_at: Updated at
+    models:
+      question: Question
+
+  comments:
+    form:
+      text: 'Input your comment'
+    edit:
+      title: 'Edit comment'
+    create:
+      success: Comment created!
+    destroy:
+      success: Comment deleted!
+    update:
+      success: Comment updated!  
+  hello: "Hello world"

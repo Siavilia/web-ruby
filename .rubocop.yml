@@ -1,0 +1,22 @@
+Style/Documentation:
+  Enabled: false
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'bin/**/*'
+    - 'node_modules/**/*'
+    - 'db/schema.rb'
+Metrics/AbcSize:
+  Enabled: false
+# Style/GuardClause:
+#   Enabled: false
+# Naming/MethodName:
+#   Enabled: false
+
+# Layout/EndOfLine:
+#   Enabled: false
+
+# Naming/FileName:
+#   Enabled: false
+# Lint/ShadowingOuterLocalVariable:
+#   Enabled: false
